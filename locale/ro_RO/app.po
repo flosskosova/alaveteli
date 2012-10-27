@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 #   <andreicristianpetcu@gmail.com>, 2012.
 #   <copyratul@gmail.com>, 2012.
@@ -180,7 +180,7 @@ msgid "<a href=\"%s\">Add an annotation</a> (to help the requester or others)"
 msgstr "<a href=\"%s\">Adaugă o notă</a> (pentru a ajuta petentul sau pe alții)"
 
 msgid "<a href=\"%s\">Are we missing a public authority?</a>"
-msgstr ""
+msgstr "<a href=\"%s\">Am omis o autoritate publică?</a>"
 
 msgid ""
 "<a href=\"%s\">Are you the owner of\n"
