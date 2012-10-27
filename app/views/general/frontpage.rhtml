@@ -15,7 +15,7 @@
           <%= _("Search over<br/>
           <strong>{{number_of_requests}} requests</strong> <span>and</span><br/>
           <strong>{{number_of_authorities}} authorities</strong>",
-          :number_of_requests => InfoRequest.count, :number_of_authorities => PublicBody.count) %>
+          :number_of_requests => InfoRequest.visible.count, :number_of_authorities => PublicBody.visible.count) %>
         </h2>
         <% form_tag({:action => "search_redirect"}, {:id => "search_form"}) do %>
         <div>
@@ -36,7 +36,7 @@
       <div id="examples_0">
         <h3><%= _("Who can I request information from?") %></h3>
         <%= _("{{site_name}} covers requests to {{number_of_authorities}} authorities, including:",
-            :site_name => site_name, :number_of_authorities => PublicBody.count) %>
+            :site_name => site_name, :number_of_authorities => PublicBody.visible.count) %>
         <ul>
             <% for popular_body in @popular_bodies %>
                 <li><%=public_body_link(popular_body)%>
@@ -59,15 +59,22 @@
         <% end %>
       </h3>
        <%= _("{{site_name}} users have made {{number_of_requests}} requests, including:",
-        :site_name => site_name, :number_of_requests => InfoRequest.count) %>
+        :site_name => site_name, :number_of_requests => InfoRequest.visible.count) %>
         <ul>
           <% for event in @request_events %>
             <li>
-               <%= public_body_link(event.info_request.public_body) %> <%= _('answered a request about') %>
+              <% if @request_events_all_successful %>
+                <%= _("{{public_body_link}} answered a request about",
+                    :public_body_link => public_body_link(event.info_request.public_body)) %>
+              <% else %>
+                <%= _("{{public_body_link}} was sent a request about",
+                    :public_body_link => public_body_link(event.info_request.public_body)) %>
+              <% end %>
+
                <%=link_to h(event.info_request.title), request_url(event.info_request)%>
                <%= _('{{length_of_time}} ago', :length_of_time => time_ago_in_words(event.described_at)) %>
                <p class="excerpt" onclick="document.location.href='<%=request_url(event.info_request)%>'"><%= excerpt(event.search_text_main(true), "", 200) %></p>
-              </li>
+            </li>
           <% end %>
         </ul>
         <p><strong>

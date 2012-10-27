@@ -16,6 +16,10 @@ DOMAIN: '127.0.0.1:3000'
 # (http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 ISO_COUNTRY_CODE: GB
 
+# This is the timezone that times and dates are displayed in
+# If not set defaults to UTC.
+#TIME_ZONE: Australia/Sydney
+
 # These feeds are displayed accordingly on the Alaveteli "blog" page:
 BLOG_FEED: 'http://www.mysociety.org/category/projects/whatdotheyknow/feed/'
 TWITTER_USERNAME: 'whatdotheyknow'
@@ -160,7 +164,7 @@ MAX_REQUESTS_PER_USER_PER_DAY: 6
 # unset if you aren't running behind varnish
 VARNISH_HOST: localhost
 
-# Adding a value here will enable Google Analytics on all non-admin pages.
+# Adding a value here will enable Google Analytics on all non-admin pages for non-admin users.
 GA_CODE: ''
 
 # If you want to override *all* the public body request emails with your own

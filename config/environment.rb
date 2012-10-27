@@ -77,6 +77,12 @@ Rails::Initializer.run do |config|
   # Make Active Record use UTC-base instead of local time
   config.active_record.default_timezone = :utc
 
+  # This is the timezone that times and dates are displayed in
+  # Note that having set a zone, the Active Record
+  # time_zone_aware_attributes flag is on, so times from models
+  # will be in this time zone
+  config.time_zone = Configuration::time_zone
+
   config.after_initialize do
      require 'routing_filters.rb'
   end
