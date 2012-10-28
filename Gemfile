@@ -7,34 +7,34 @@ if File.exist? "/etc/debian_version" and File.open("/etc/debian_version").read.s
 end
 source :rubygems
 
-gem 'rails', '2.3.14'
+gem 'rails'
 gem 'pg'
 
-gem 'fast_gettext', '>= 0.6.0'
-gem 'fastercsv', '>=1.5.5'
-gem 'gettext_i18n_rails', '>= 0.7.1'
-gem 'gettext', '~> 2.3.3'
-gem 'json', '~> 1.5.1'
+gem 'fast_gettext'
+gem 'fastercsv'
+gem 'gettext_i18n_rails'
+gem 'gettext'
+gem 'json'
 gem 'mahoro'
 gem 'memcache-client', :require => 'memcache'
-gem 'locale', '>= 2.0.5'
+gem 'locale'
 gem 'net-http-local'
 gem 'net-purge'
-gem 'rack', '~> 1.1.0'
-gem 'rdoc', '~> 2.4.3'
-gem 'recaptcha', '~> 0.3.1', :require => 'recaptcha/rails'
+gem 'rack'
+gem 'rdoc'
+gem 'recaptcha', :require => 'recaptcha/rails'
 # :require avoids "already initialized constant" warnings
 gem 'rmagick', :require => 'RMagick'
-gem 'routing-filter', '~> 0.2.4'
-gem 'rake', '~> 0.9.2.2'
-gem 'rspec', '~> 1.3.2'
-gem 'rspec-rails', '~> 1.3.4'
-gem 'ruby-msg', '~> 1.5.0'
-gem 'test-unit', '~> 1.2.3', :platforms => :ruby_19
+gem 'routing-filter'
+gem 'rake'
+gem 'rspec'
+gem 'rspec-rails'
+gem 'ruby-msg'
+gem 'test-unit', :platforms => :ruby_19
 gem 'vpim'
-gem 'will_paginate', '~> 2.3.11'
+gem 'will_paginate'
 # when 1.2.9 is released by the maintainer, we can stop using this fork:
-gem 'xapian-full-alaveteli', '~> 1.2.9.5'
+gem 'xapian-full-alaveteli'
 gem 'xml-simple'
 gem 'zip'
 gem 'capistrano'
@@ -43,7 +43,7 @@ gem 'newrelic_rpm'
 
 group :test do
   gem 'fakeweb'
-  gem 'rspec-rails', '~> 1.3.4'
+  gem 'rspec-rails'
 end
 
 group :develop do
