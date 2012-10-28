@@ -25,3 +25,42 @@ of useful information (including a blog) on
 
 Looking for the latest stable release? It's on the 
 [master branch](https://github.com/mysociety/alaveteli/tree/master).
+
+# install 
+
+  get sources  
+      git clone git@github.com:flosskosova/alaveteli.git
+      cd alaveteli/
+
+  pull the latest code :
+        git remote add original git://github.com/mysociety/alaveteli.git
+  	git pull orginal master
+  	git pull original develop
+  
+  update the submodules :
+  	git submodule update --init
+
+
+  get rvm :
+       git clone git@github.com:h4ck3rm1k3/rvm.git
+       cd rvm/
+       ./install 
+       source /home/mdupont/.rvm/scripts/rvm
+       sudo  /usr/bin/apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion pkg-config
+       rvm install 1.9.2
+
+  setup :
+    cd ../alaveteli/
+    gem install bundler
+    bundle install
+
+  setup the database :
+    sudo apt-get install postgresql-8.4
+    create the file alaveteli/config/database.yml from alaveteli/config/database.yml-example, change the password
+    edit /etc/postgresql/8.4/main/pg_hba.conf like http://www.germanxml.de/install/postgres/files/pg_hba.conf.html
+    restart the server
+     
+   
+  setup the app :
+    create config/newrelic.yml from config/newrelic.yml-example
+    create config/general.yml from config/general.yml-example
