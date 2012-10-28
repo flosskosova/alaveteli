@@ -60,7 +60,15 @@ Looking for the latest stable release? It's on the
     edit /etc/postgresql/8.4/main/pg_hba.conf like http://www.germanxml.de/install/postgres/files/pg_hba.conf.html
     restart the server
      
+    sudo su postgres
+    createuser mdupont (my user name,use yours)
+    createdb foi_development
+    
+    install memcached
    
   setup the app :
     create config/newrelic.yml from config/newrelic.yml-example
     create config/general.yml from config/general.yml-example
+
+   run : rake
+   run : rake db:migrate
