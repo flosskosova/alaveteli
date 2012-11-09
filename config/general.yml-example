@@ -23,6 +23,9 @@ ISO_COUNTRY_CODE: GB
 # These feeds are displayed accordingly on the Alaveteli "blog" page:
 BLOG_FEED: 'http://www.mysociety.org/category/projects/whatdotheyknow/feed/'
 TWITTER_USERNAME: 'whatdotheyknow'
+# Set the widget_id to get the Twitter sidebar on the blog page.
+# To get one https://twitter.com/settings/widgets
+TWITTER_WIDGET_ID: ''
 
 # Locales we wish to support in this app, space-delimited
 AVAILABLE_LOCALES: 'en es'
@@ -48,6 +51,12 @@ FRONTPAGE_PUBLICBODY_EXAMPLES: 'tgq'
 THEME_URLS:
  - 'git://github.com/mysociety/adminbootstraptheme.git'
  - 'git://github.com/mysociety/alavetelitheme.git'
+
+# When rails-post-deploy installs the themes it will try this branch first
+# (but only if this config is set). If the branch doesn't exist it will fall
+# back to using a tagged version specific to your installed alaveteli version.
+# If that doesn't exist it will back to master.
+THEME_BRANCH: false
 
 # Whether a user needs to sign in to start the New Request process
 FORCE_REGISTRATION_ON_NEW_REQUEST: false

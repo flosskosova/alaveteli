@@ -28,6 +28,8 @@ Looking for the latest stable release? It's on the
 
 # install 
 
+  sudo apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion pkg-config libmagic-dev libpq-dev libmagickcore-dev libmagickwand-dev uuid-dev memcached postgresql-8.4
+
   get sources  
       git clone git@github.com:flosskosova/alaveteli.git
       cd alaveteli/
@@ -41,12 +43,13 @@ Looking for the latest stable release? It's on the
   	git submodule update --init
 
 
+
   get rvm :
        git clone git@github.com:h4ck3rm1k3/rvm.git
        cd rvm/
        ./install 
        source /home/mdupont/.rvm/scripts/rvm
-       sudo  /usr/bin/apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion pkg-config
+       
        rvm install 1.9.2
 
   setup :
@@ -55,7 +58,7 @@ Looking for the latest stable release? It's on the
     bundle install
 
   setup the database :
-    sudo apt-get install postgresql-8.4
+
     create the file alaveteli/config/database.yml from alaveteli/config/database.yml-example, change the password
     edit /etc/postgresql/8.4/main/pg_hba.conf like http://www.germanxml.de/install/postgres/files/pg_hba.conf.html
     restart the server

@@ -46,10 +46,15 @@ class WorldFOIWebsites
                                   :country_name => "Chile",
                                   :country_iso_code => "CL",
                                   :url => "http://accesointeligente.org"},
-                              {:country_name => "Australia",
+                              {:name => "Right To Know",
+                                  :country_name => "Australia",
                                   :country_iso_code => "AU",
-                                  # The Australian site is not yet live. So, not including name & url yet.
-                                  }]
+                                  :url => "http://www.righttoknow.org.au"},
+                              {:name => "Informace pro Vsechny",
+                                  :country_name => "Česká republika",
+                                  :country_iso_code => "CZ",
+                                  :url => "http://www.infoprovsechny.cz"}
+                              ]
         return world_foi_websites
     end
 
@@ -58,4 +63,4 @@ class WorldFOIWebsites
         return result
     end
 end
-            
+
